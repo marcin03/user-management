@@ -27,9 +27,9 @@ $this->params['breadcrumbs'][] = $this->title;
 						'value'=>@$model->user->username,
 					],
 					'ip',
-					'language',
-					'os',
-					'browser',
+					//'language',
+					//'os',
+					//'browser',
 					'user_agent',
 
 					'visit_time:datetime',
