@@ -19,7 +19,7 @@
 return [
     'Active' => 'Aktywny',
     'Are you sure you want to delete this user?' => 'Czy na pewno chcesz usunąć tego użytkownika?',
-    'Banned' => 'Zbanowany',
+    'Banned' => 'Zablokowany',
     'Bind to IP' => 'Przypisz do IP',
     'Browser' => 'Przeglądarka',
     'Change own password' => 'Zmień swoje hasło',
@@ -89,7 +89,7 @@ return [
     'User agent' => '',
     'User creation' => 'Dodawanie użytkownika',
     'Users' => 'Użytkownicy',
-    'Visit Time' => 'Ostatnia wizyta',
+    'Visit Time' => 'Ostatnie logowanie',
     'Visit log' => 'Rejestr wizyt',
     'Wrong format. Enter valid IPs separated by comma' => 'Nieprawidłowy format. Wpisz prawidłowe adresy IP oddzielone przecinkami',
     'Wrong password' => 'Nieprawidłowe hasło',
