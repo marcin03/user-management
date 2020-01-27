@@ -15,6 +15,47 @@ class LoginForm extends Model
 
 	private $_user = false;
 
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+        //$behaviors[] = TimestampBehavior::className();
+        $behaviors[] = [
+            'class' => '\ethercreative\loginattempts\LoginAttemptBehavior',
+
+            // Amount of attempts in the given time period
+            'attempts' => 10000,
+
+            // the duration, for a regular failure to be stored for
+            // resets on new failure
+            'duration' => 10,
+
+            // the unit to use for the duration
+            'durationUnit' => 'second',
+
+            // the duration, to disable login after exceeding `attemps`
+            'disableDuration' => 1,
+
+            // the unit to use for the disable duration
+            'disableDurationUnit' => 'second',
+
+            // the attribute used as the key in the database
+            // and add errors to
+            'usernameAttribute' => 'username',
+
+            // the attribute to check for errors
+            'passwordAttribute' => 'password',
+
+            // the validation message to return to `usernameAttribute`
+            'message' => 'Zbyt wiele prób logowania tego użytkownika',
+        ];
+        //var_dump($behaviors);
+        //die();
+        return $behaviors;
+    }
+
 	/**
 	 * @inheritdoc
 	 */
